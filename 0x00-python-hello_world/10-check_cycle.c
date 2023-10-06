@@ -1,11 +1,14 @@
-#include "list.h"
+#include "lists.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
- * check_cycle - function that check for cycle in a linked list
+ * check_cycle - function that checks if a
+ * linked list has a cycle in it
  *
- * @list: list of parameter
- *
- * Return: 1 if there is no cycle o 0 if there is cycle
+ * @list: list of parameters
+ * Return: 1 if there is no cycle, 0 if there is a cycle
  */
 
 int check_cycle(listint_t *list)
@@ -25,4 +28,4 @@ int check_cycle(listint_t *list)
 		fast = fast->next->next;
 	}
 	return (0);
-
+}
