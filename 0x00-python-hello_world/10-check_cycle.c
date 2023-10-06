@@ -10,23 +10,19 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *x2, *x1;
+	listint_t *fast, *slow;
 
 	if (!list || !list->next)
-	{
 		return (0);
-	}
-	x2 = list->next->next;
-	x1 = list;
+	fast = list->next->next;
+	slow = list;
 
-	while (x1 && x2 && x2->next)
+	while (slow && fast && fast->next)
 	{
-		if (x1 == x2)
-		{
+		if (slow == fast)
 			return (1);
-		}
-		x1 = x1->next;
-		x2 = x2->next->next;
+		slow = slow->next;
+		fast = fast->next->next;
 	}
 	return (0);
 
