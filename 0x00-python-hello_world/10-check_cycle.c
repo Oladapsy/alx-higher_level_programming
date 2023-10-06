@@ -1,7 +1,5 @@
 #include "list.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+
 /**
  * check_cycle - function that check for cycle in a linked list
  *
@@ -14,7 +12,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *x2, *x1;
 
-	if (!list || list->next)
+	if (!list || !list->next)
 	{
 		return (0);
 	}
@@ -31,4 +29,4 @@ int check_cycle(listint_t *list)
 		x2 = x2->next->next;
 	}
 	return (0);
-}
+
