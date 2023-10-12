@@ -1,4 +1,7 @@
+#include <stdlib.h>
 #include "lists.h"
+#include <string.h>
+#include <stdio.h>
 /**
  * insert_node: insert a number into a sorted list
  *
@@ -23,10 +26,10 @@ listint_t *insert_node(listint_t **head, int number)
 	new->n = number;
 	new->next = NULL;
 
-	if (!*head || (head)->n > number)
+	if (!*head || (*head)->n > number)
 	{
 		new->next = *head;
-		return (new)
+		return (new);
 	}
 	else
 	{
