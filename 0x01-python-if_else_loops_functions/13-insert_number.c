@@ -1,6 +1,6 @@
 #include <stdlib.h>
+#include <unistd.h>
 #include "lists.h"
-#include <string.h>
 #include <stdio.h>
 /**
  * insert_node: insert a number into a sorted list
