@@ -3,11 +3,13 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * insert_node: insert a number into a sorted list
+ * insert_node - insert a number into a sorted list
  *
  * @head: a linked list
  *
- * number: number to be inserted
+ * @number: number to be inserted
+ *
+ * Return: pointer to new head
  */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -28,7 +30,7 @@ listint_t *insert_node(listint_t **head, int number)
 	if (!*head || (*head)->n > number)
 	{
 		new->next = *head;
-		return (*head = new);
+		return (new);
 	}
 	else
 	{
@@ -37,7 +39,8 @@ listint_t *insert_node(listint_t **head, int number)
 			temp = current;
 			current = current->next;
 		}
-		temp->next == new;
+
+		temp->next = new;
 		new->next = current;
 
 	}
