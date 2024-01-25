@@ -18,7 +18,6 @@ class Square():
         return self.__size
 
     @size.setter
-    """property setter"""
     def size(self, value):
         """make the value of the set meet a standard"""
         if not isinstance(value, int):
