@@ -9,10 +9,6 @@ class Square():
         """ initialize the newly created square
         where: size equates the size of the square and given a default value 0
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
         self.__size = size
 
         """Private attribute"""
@@ -21,14 +17,15 @@ class Square():
         """property getter"""
         return self.__size
 
+    @size.setter
     """property setter"""
     def size(self, value):
         """make the value of the set meet a standard"""
-        if not isinstance(int, value):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        return value
+        self.__size = value
 
     def area(self):
         """a public method that computes the area of the class obj"""
