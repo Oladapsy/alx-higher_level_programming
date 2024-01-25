@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+"""Representing a square"""
+
+
+class Square():
+    """A square object representation"""
+
+    def __init__(self, size=0):
+        """ initialize the newly created square
+        where: size equates the size of the square and given a default value 0
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
+
+        """Private attribute"""
+    @property
+    def size(self):
+        """property getter"""
+        return self.__size
+
+    """property setter"""
+    def size(self, value):
+        """make the value of the set meet a standard"""
+        if not isinstance(int, value):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        return value
+
+    def area(self):
+        """a public method that computes the area of the class obj"""
+        return (self.__size * self.__size)
