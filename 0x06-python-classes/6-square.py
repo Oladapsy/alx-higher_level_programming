@@ -50,7 +50,7 @@ class Square():
     def my_print(self):
         """Public instance method: that returns the current square area"""
         if self.__size == 0:
-            print()
+            print("")
             return
         [print() for i in range(self.__position[1])]
         for i in range(self.__size):
