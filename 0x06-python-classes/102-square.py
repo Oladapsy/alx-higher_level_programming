@@ -31,7 +31,7 @@ class Square():
         return (self.__size * self.__size)
 
     def __eq__(self, other):
-        """define the == comparison of a square"""
+        """define the == comparison of a square area"""
         return self.area() == other.area()
 
     def __ne__(self, other):
@@ -39,17 +39,17 @@ class Square():
         return self.area() != other.area()
 
     def __lt__(self, other):
-         """define the < comparison to a square"""
-         return self.area() < other.area()
+        """define the < comparison to a square"""
+        return self.area() < other.area()
 
     def __le__(self, other):
-         """define the <= comparison to a square"""
-         return self.area() <= other.area()
+        """define the <= comparison to a square"""
+        return self.area() <= other.area()
 
     def __gt__(self, other):
-         """define the > comparison to a square"""
-         return self.area() > other.area()
+        """define the > comparison to a square"""
+        return self.area() > other.area()
 
-    def __ge__(self, others):
-         """define the >= comparison to a square"""
-         return self.area() >= other.area()
+    def __ge__(self, other):
+        """define the >= comparison to a square"""
+        return self.area() >= other.area()
