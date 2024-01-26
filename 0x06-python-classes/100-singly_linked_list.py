@@ -2,6 +2,8 @@
 """
     a class that defines a node of a singly linked list
 """
+
+
 class Node:
     """a class(object) that represents a node, note:
         nodes have data and link to the next node"""
@@ -35,13 +37,12 @@ class Node:
         self.__next_node = value
 
 
-
 class SinglyLinkedList:
     """a class SinglyLinkedList that defines a singly linked list"""
     def __init__(self):
         """the initialization methoos with no parameter"""
         self.__head = None
-    
+
     def sorted_insert(self, value):
         """insert the node in a sorted position"""
         new = Node(value)
@@ -66,4 +67,4 @@ class SinglyLinkedList:
         while tmp is not None:
             values.append(str(tmp.data))
             tmp = tmp.next_node
-        return ("/n".join(values))
+        return ("\n".join(values))
