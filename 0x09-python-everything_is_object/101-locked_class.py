@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # work by: odedeyi oladapo olayinka
-#Lord  i thank you for the wonderful life you've given me
 """ A class with no class or obj attr...
 
 that prevents user: from creating new instance attribute
