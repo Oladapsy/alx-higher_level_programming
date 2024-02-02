@@ -73,3 +73,33 @@ pass string to both
 	TypeError: a must be an integer
 
 _______________________________________________________
+check for float overflow when infinity is passed
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	 File "<stdin>", line 1, in ?
+	OverflowError: cannot convert float infinity to integer
+
+---------------------------------------------------------
+float overflow error when infinity is passed
+
+	>>> add_integer(2, float('inf'))
+	Traceback (most recent call last):
+	 File "<stdin>", line 1, in ?
+	OverflowError: cannot convert float infinity to integer
+
+________________________________________________________________-
+deal with float NaN == cannot convert float NaN to integer
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	 File "<stdin>", line 1, in ?
+	ValueError: cannot convert float NaN to integer
+
+---------------------------------------------------------------
+same as the previous for b
+
+	>>> add_integer(3, float('nan'))
+	Traceback (most recent call last):
+	 File "<stdin>", line 1, in ?
+	ValueError: cannot convert float NaN to integer
