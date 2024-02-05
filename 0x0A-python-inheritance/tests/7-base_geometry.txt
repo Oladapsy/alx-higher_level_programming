@@ -93,3 +93,35 @@ let us try value with None
         Traceback (most recent call last):
          File "<stdin>", line 1, in ?
         TypeError: turple_big must be an integer
+
+::
+
+	>>> bg.integer_validator("empty string", [])
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: empty string must be an integer
+
+::
+
+	>>> bg.integer_validator("set", {2, 8})
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: set must be an integer
+
+::
+
+single list
+
+	>>> bg.integer_validator("single list", [2])
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: single list must be an integer
+
+::
+
+boolean
+
+	>>> bg.integer_validator("Boolean", True)
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: Boolean must be an integer
