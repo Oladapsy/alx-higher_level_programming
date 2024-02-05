@@ -3,8 +3,14 @@ Test the list
 ___________________________________
 
 list is a base class which has been inherited by MyList
+prints an empty list if nothing is passed to it
 
 	>>> MyList = __import__('1-my_list').MyList
+        >>> my_list = MyList()
+        >>> print(my_list)
+        []
+
+prints the list
 	>>> my_list = MyList()
 	>>> my_list.append(1)
 	>>> my_list.append(4)
@@ -15,8 +21,28 @@ list is a base class which has been inherited by MyList
 another instance of the sort which actually sort
 
 	>>> my_list = MyList()
-	>>> my_list.append(5)
 	>>> my_list.append(7)
+	>>> my_list.append(5)
 	>>> my_list.append(60)
 	>>> my_list.print_sorted()
 	[5, 7, 60]
+
+let's try string
+
+	>>> my_list = MyList()
+	>>> my_list.append("i")
+	>>> my_list.append("am")
+	>>> my_list.append("a")
+	>>> my_list.append("man")
+	>>> print(my_list)
+	['i', 'am', 'a', 'man']
+
+let's try sorted string
+
+	>>> my_list = MyList()
+	>>> my_list.append("i")
+	>>> my_list.append("am")
+	>>> my_list.append("a")
+	>>> my_list.append("man")
+	>>> my_list.print_sorted()
+	['a', 'am', 'i', 'man']
