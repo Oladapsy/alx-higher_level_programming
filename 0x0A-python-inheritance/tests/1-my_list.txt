@@ -1,0 +1,22 @@
+____________________________________
+Test the list
+___________________________________
+
+list is a base class which has been inherited by MyList
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> print(my_list)
+	[1, 4, 2]
+
+another instance of the sort which actually sort
+
+	>>> my_list = MyList()
+	>>> my_list.append(5)
+	>>> my_list.append(7)
+	>>> my_list.append(60)
+	>>> my_list.print_sorted()
+	[5, 7, 60]
