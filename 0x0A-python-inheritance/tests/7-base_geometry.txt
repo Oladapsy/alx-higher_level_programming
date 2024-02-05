@@ -68,3 +68,12 @@ let us try no input
         Traceback (most recent call last):
          File "<stdin>", line 1, in ?
         TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+::
+
+let us try 1 input
+
+	>>> bg.integer_validator(None)
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: integer_validator() missing 1 required positional argument: 'value'
