@@ -86,3 +86,10 @@ let us try value with None
         Traceback (most recent call last):
          File "<stdin>", line 1, in ?
         TypeError: The None must be an integer
+
+::
+
+	>>> bg.integer_validator("turple_big", (2, 7, 8))
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: turple_big must be an integer
