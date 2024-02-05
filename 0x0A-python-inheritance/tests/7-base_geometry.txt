@@ -50,3 +50,12 @@ let us try a list
         Traceback (most recent call last):
          File "<stdin>", line 1, in ?
         TypeError: my_int must be an integer
+
+::
+
+let us try turple
+
+	>>> bg.integer_validator("turple", (0,))
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: turple must be an integer
