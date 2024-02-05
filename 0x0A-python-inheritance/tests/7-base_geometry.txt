@@ -77,3 +77,12 @@ let us try 1 input
         Traceback (most recent call last):
          File "<stdin>", line 1, in ?
         TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+::
+
+let us try value with None
+
+	>>> bg.integer_validator("The None", None)
+        Traceback (most recent call last):
+         File "<stdin>", line 1, in ?
+        TypeError: The None must be an integer
