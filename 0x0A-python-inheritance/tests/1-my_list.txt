@@ -46,3 +46,11 @@ let's try sorted string
 	>>> my_list.append("man")
 	>>> my_list.print_sorted()
 	['a', 'am', 'i', 'man']
+
+nothing to sort on an empty list
+
+::
+
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
