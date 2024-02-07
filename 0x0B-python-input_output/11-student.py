@@ -19,4 +19,4 @@ class Student:
     def reload_from_json(self, json):
         """ a public method that replaces all attributes of d stud.."""
         for key, value in json.items():
-            return setattr(self, key, value)
+            setattr(self, key, value)
