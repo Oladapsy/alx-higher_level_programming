@@ -73,3 +73,15 @@ when sorted have no method
 	['apple', 'banana', 'cherry']
 	>>> my_list.print_sorted
 	<bound method MyList.print_sorted of ['apple', 'banana', 'cherry']>
+
+::
+
+	>>> my_list = MyList([1, 2, 3])
+	>>> print(my_list)
+	[1, 2, 3]
+
+::
+
+	>>> my_list = MyList(None)
+	Traceback (most recent call last):
+	TypeError: 'NoneType' object is not iterable
