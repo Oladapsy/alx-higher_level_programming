@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ an new class based on 6-base_geometry.py """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__('8-base_geometry').BaseGeometry
 """ the BaseGeometry imported"""
 
 
