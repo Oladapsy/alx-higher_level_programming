@@ -122,3 +122,40 @@ when sorted have no method
     	>>> my_list.append(5)
     	>>> print(my_list)
 	[2, 3, 1, 4, 2, 3, 5]
+
+::
+
+	>>> my_list.print_sorted()
+    	[1, 2, 2, 3, 3, 4, 5]
+
+::
+
+	>>> print(my_list)
+        [2, 3, 1, 4, 2, 3, 5]
+
+::
+
+	 >>> my_list = MyList()
+    	>>> my_list.append("Brennan")
+    	>>> my_list.append("Poppy")
+    	>>> my_list.append("School")
+    	>>> my_list.append("Holberton")
+    	>>> my_list.append("Betty")
+    	>>> print(my_list)
+    	['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
+
+::
+
+	>>> my_list.print_sorted()
+    	['Betty', 'Brennan', 'Holberton', 'Poppy', 'School']
+
+::
+
+	>>> print(my_list)
+    	['Brennan', 'Poppy', 'School', 'Holberton', 'Betty']
+
+::
+
+	>>> my_list = MyList()
+    	>>> my_list.print_sorted()
+    	[]
