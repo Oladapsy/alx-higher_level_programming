@@ -148,3 +148,14 @@ the one who's  divisor is a float
 	... ]
 	>>> print(matrix_divided(matrix,1.1))
 	[[1.82, 1.82], [1.82, 1.82]]
+
+::
+
+let us try all float
+
+	>>> matrix = [
+        ... [2.0, 2.0],
+        ... [2, 2.0]
+        ... ]
+        >>> print(matrix_divided(matrix,1.1))
+        [[1.82, 1.82], [1.82, 1.82]]
