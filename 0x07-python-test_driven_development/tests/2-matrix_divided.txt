@@ -215,3 +215,8 @@ let us test for positive infinity
 	>>> print(matrix)
 	[[3, 6, 9], [12, 15, 18]]
 
+::
+
+	>>> matrix = [[]]
+        >>> print(matrix_divided(matrix, 3))
+	[[]]
