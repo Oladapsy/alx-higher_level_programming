@@ -170,3 +170,13 @@ let us test for positive infinity
         ... ]
         >>> print(matrix_divided(matrix, float('inf')))
         [[0.0, 0.0], [0.0, 0.0]]
+
+::
+
+	>>> matrix = [
+        ... ["yes", "no"],
+        ... ["me", "no"]
+        ... ]
+        >>> print(matrix_divided(matrix, 2))
+        Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
