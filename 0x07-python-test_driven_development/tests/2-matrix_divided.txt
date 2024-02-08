@@ -137,3 +137,14 @@ using 0 as divisor to give division error
         >>> print(matrix_divided(matrix, 0))
         Traceback (most recent call last):
 	ZeroDivisionError: division by zero
+
+::
+
+the one who's  divisor is a float
+
+	>>> matrix = [
+	... [2, 2],
+	... [2, 2]
+	... ]
+	>>> print(matrix_divided(matrix,1.1))
+	[[1.82, 1.82], [1.82, 1.82]]
