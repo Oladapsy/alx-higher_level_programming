@@ -159,3 +159,14 @@ to ma and mb correct list
         >>> print(matrix_mul([[1, 2, 4], [1], [1, 4]], [[1, 2], [3, 4]]))
         Traceback (most recent call last):
         TypeError: each row of m_a must be of the same size
+
+::
+
+	>>> m_a = [
+	... [1, 2],
+	... [3, 5, 6]
+	... ]
+	>>> m_b = m_a
+	>>> print(matrix_mul(m_a, m_b))
+	Traceback (most recent call last):
+        TypeError: each row of m_a must be of the same size
