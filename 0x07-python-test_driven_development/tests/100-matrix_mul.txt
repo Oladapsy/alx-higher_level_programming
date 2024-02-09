@@ -109,7 +109,7 @@ Testing over content of the list of list not an int or float
 
         >>> print(matrix_mul([[1, 2], [4.6, 4]], [["i", 2], [3, 4]]))        
         Traceback (most recent call last):
-	TypeError: unsupported operand type(s) for +=: 'int' and 'str'
+	TypeError: m_b should contain only integers or floats
 
 ::
 
