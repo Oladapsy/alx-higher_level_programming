@@ -27,3 +27,7 @@ class TestMaxInteger(unittest.TestCase):
     def test_string(self):
         """ test chaaracyter not string """
         self.assertEqual(max_integer(["a", "c", "b"]), "c")
+
+    def test_string(self):
+        """ test just one list"""
+        self.assertEqual(max_integer([7]), 7)
