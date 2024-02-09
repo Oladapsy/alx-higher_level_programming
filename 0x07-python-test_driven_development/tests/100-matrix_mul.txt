@@ -124,3 +124,38 @@ Testing rows and columns
 	>>> print(matrix_mul([[1], [1]], [[1, 2], [3, 4]]))      
         Traceback (most recent call last):
 	ValueError: m_a and m_b can't be multiplied
+
+::
+
+Test a list list of numbers vs list of int
+
+	>>> print(matrix_mul([[1, 2], [1, 2]], [1, 2]))
+        Traceback (most recent call last):
+	TypeError: m_b must be a list of lists
+
+::
+
+list of list of numbers of various size
+to ma and mb correct list
+
+	>>> print(matrix_mul([[1, 2, 4], [1, 4]], [[1, 2], [3, 4]]))      
+        Traceback (most recent call last):
+	TypeError: each row of m_a must be of the same size
+
+::
+
+list of list of numbers of various size
+to mb and ma correct list
+
+        >>> print(matrix_mul([[1, 2], [1, 4]], [[1, 2, 4], [3, 4]]))
+        Traceback (most recent call last):
+	TypeError: each row of m_b must be of the same size
+
+::
+
+list of list of numbers of various size
+to ma and mb correct list
+
+        >>> print(matrix_mul([[1, 2, 4], [1], [1, 4]], [[1, 2], [3, 4]]))
+        Traceback (most recent call last):
+        TypeError: each row of m_a must be of the same size
