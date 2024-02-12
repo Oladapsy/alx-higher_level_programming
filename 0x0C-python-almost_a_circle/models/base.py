@@ -18,18 +18,17 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """ return a json rep of the dico """
-        if list_dictionaries == None:
+        if list_dictionaries is None:
             return ""
-        
+
         list_Json = json.dumps(list_dictionaries)
         return list_Json
 
     @staticmethod
     def from_json_string(json_string):
         """ returns the list of the JSON string representation json_string"""
-        if json_string == None:
+        if json_string is None:
             return ""
-
 
     @classmethod
     def save_to_file(cls, list_objs):
