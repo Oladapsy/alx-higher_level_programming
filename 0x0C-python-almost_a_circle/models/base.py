@@ -15,6 +15,10 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes already set: """
+
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """ return a json rep of the dico """
