@@ -19,7 +19,7 @@ class Base:
     def to_json_string(list_dictionaries):
         """ return a json rep of the dico """
         if list_dictionaries is None:
-            return ""
+            return "[]"
 
         list_Json = json.dumps(list_dictionaries)
         return list_Json
