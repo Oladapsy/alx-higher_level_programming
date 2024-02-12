@@ -22,7 +22,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """ the width setter"""
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -74,15 +74,47 @@ class Rectangle(Base):
         """ prints in stdout the Rectangle instance with the character #"""
         if self.__width == 0 or self.__height == 0:
             print("")
+        [print("") for y in range(self.__y)]
         for length in range(self.__height):
+            print(" " * self.__x, end='')
             print("#" * self.__width, end='')
             print()
 
-        def __str__(self):
-            """ it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-            class_id = self.id
-            x = self.x
-            y = self.y
-            width = self.width
-            height = height.width
-            return (f"[Rectangle] ({class_id}) {x}/{y} - {width}/{self.height}")
+    def __str__(self):
+        """ it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        class_id = self.id
+        x = self.x
+        y = self.y
+        width = self.width
+        height = self.height
+        return (f"[Rectangle] ({class_id}) {x}/{y} - {width}/{height}")
+
+    def update(self, *args, **kwargs):
+        """ assigns an argument to each attribute: """
+        argument = []
+        for item in args:
+            argument.append(item)
+        if len(argument) >= 1:
+            self.id = argument[0]
+        if len(argument) >= 2:
+            self.width = argument[1]
+        if len(argument) >= 3:
+            self.height = argument[2]
+        if len(argument) >= 4:
+            self.x = argument[3]
+        if len(argument) >= 5:
+            self.y = argument[4]
+
+        if len(args) == 0:
+            for key, val in kwargs.items():
+                self.__setattr__(key, val)
+            return
+
+    def to_dictionary(self):
+        """ returns the dictionary representation of a Rectangle"""
+        return {"x": getattr(self, "x"),
+                "y": getattr(self, "y"),
+                "id": getattr(self, "id"),
+                "height": getattr(self, "height"),
+                "width": getattr(self, "width")
+                }
