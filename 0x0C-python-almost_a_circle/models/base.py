@@ -15,6 +15,7 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @classmethod
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set: """
         if dictionary and dictionary != {}:
@@ -53,3 +54,15 @@ class Base:
         file_name = cls.__name__ + ".json"
         with open(file_name, mode='w', encoding='utf-8') as a_file:
             json.dump(content, a_file)
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, mode='r', encoding='utf-8') as json_file:
+                inst_list = Base.from_json_string(json_file.read())
+                return [cls.create(**d) for d in inst_list]
+        except IOError:
+            return []
+
