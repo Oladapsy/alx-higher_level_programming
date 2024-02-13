@@ -65,4 +65,3 @@ class Base:
                 return [cls.create(**d) for d in inst_list]
         except IOError:
             return []
-
