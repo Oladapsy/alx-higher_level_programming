@@ -1,4 +1,4 @@
---creates a table second_tablei and add multiple row
+-- creates a table second_tablei and add multiple row
 
 USE hbtn_0c_0;
 CREATE TABLE IF NOT EXISTS second_table (
