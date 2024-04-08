@@ -7,11 +7,13 @@ if (args.length < 3) {
 } else if (args.length === 3) {
   console.log(0);
 } else {
-  let highest = 0;
+  let second = args[2];
+  let high = args[3];
   for (let i = 2; i < args.length; i++) {
-    if (parseInt(args[i]) > highest) {
-      highest = parseInt(args[i]);
+    if (parseInt(args[i]) > high) {
+      second = high;
+      high = args[i];
     }
   }
-  console.log(highest);
+  console.log(second);
 }
