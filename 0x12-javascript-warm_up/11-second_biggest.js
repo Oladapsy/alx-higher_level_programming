@@ -2,17 +2,18 @@
 /* script that searches the second biggest integer in the list of arguments. */
 const args = process.argv;
 
-if (args.length < 3) {
-  console.log(0);
-} else if (args.length === 3) {
+if (args.length <= 3) {
   console.log(0);
 } else {
-  let second = args[2];
-  let high = args[3];
+  let second = parseInt(args[2]);
+  let high = parseInt(args[3]);
   for (let i = 2; i < args.length; i++) {
-    if (parseInt(args[i]) > high) {
+    const current = parseInt(args[i]);
+    if (current > high) {
       second = high;
-      high = args[i];
+      high = current;
+    } else if (current > second && current < high) {
+      second = current;
     }
   }
   console.log(second);
