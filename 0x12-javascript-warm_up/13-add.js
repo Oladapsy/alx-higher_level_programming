@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-/* returns the addition of two integers */
-function add (a, b) {
+#!/usr/bin/node
+exports.add = function add (a, b) {
   return a + b;
-}
+};
