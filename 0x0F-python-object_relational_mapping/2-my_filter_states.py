@@ -16,7 +16,7 @@ if __name__ == "__main__":
                          )
     cur = db.cursor()
     arg = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name = '{}'".format(arg))
+    cur.execute("SELECT * FROM states WHERE BINARY name = '{}'".format(arg))
     db.commit()
     query_row = cur.fetchall()
     for row in query_row:
