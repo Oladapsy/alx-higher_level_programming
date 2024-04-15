@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 script that takes in an argument and displays all values
 in the states table of hbtn_0e_0_usa
 where name matches the argument.
@@ -16,7 +16,7 @@ if __name__ == "__main__":
                          )
     cur = db.cursor()
     arg = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name=%s", arg)
+    cur.execute(f"SELECT * FROM states WHERE name = '{arg}'")
     db.commit()
     query_row = cur.fetchall()
     for row in query_row:
