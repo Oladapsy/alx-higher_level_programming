@@ -9,6 +9,7 @@ if __name__ == "__main__":
                          port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states WHERE name REGEXP '^N' ORDER BY id ASC")
+    db.commit()
     rows = cur.fetchall()
     for row in rows:
         print(row)
