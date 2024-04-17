@@ -18,6 +18,6 @@ if __name__ == "__main__":
     session = Session()
 
     for state in session.query(State):
-        if "a" in state.name:
+        for "a" in state.name:
             session.delete(state)
     session.commit()
