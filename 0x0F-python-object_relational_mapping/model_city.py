@@ -2,7 +2,11 @@
 """ a Python file similar to model_state.py named model_city.py
 """
 from sqlalchemy import Column, ForeignKey, String, Integer
-from model_state import State, Base
+from sqlalchemy.ext.declarative import declarative_base
+
+
+Base = declarative_base()
+
 
 class City(Base):
     """ inherits from Base imported from model_state """
