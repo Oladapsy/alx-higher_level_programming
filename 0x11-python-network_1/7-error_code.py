@@ -6,7 +6,7 @@ import sys
 import requests
 
 
-if __name__ == "__main_":
+if __name__ == "__main__":
     url = sys.argv[1]
     r = requests.get(url)
     if r.status_code >= 400:
