@@ -8,10 +8,12 @@ import requests
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        letter = {'q': ""}
+        letter = ""
     else:
-        letter = {'q': sys.argv[1]}
-    r = requests.post('http://0.0.0.0:5000/search_user', data=letter)
+        letter = sys.argv[1]
+        q_data = {"q": letter}
+
+    r = requests.post('http://0.0.0.0:5000/search_user', data=q_data)
     try:
         response = r.json()
         if response == {}:
