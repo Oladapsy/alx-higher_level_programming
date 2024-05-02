@@ -19,8 +19,6 @@ if __name__ == "__main__":
         if response == {}:
             print("No result")
         else:
-            j_id = response.get('id')
-            name = reponse.get('name')
-            print(f"[{j_id}] {name}")
+            print("[{}] {}".format(response.get("id"), response.get("name")))
     except ValueError:
         print("Not a valid JSON")
