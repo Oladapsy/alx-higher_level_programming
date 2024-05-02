@@ -10,7 +10,8 @@ import sys
 if __name__ == "__main__":
     r_name = sys.argv[1]
     o_name = sys.argv[2]
-    url = F"https://developer.github.com/v3/repos/{o_name}/{r_name}/commits/"
+    url = "https://developer.github.com/v3/repos/{}/{}/commits/".format(
+            o_name, r_name)
 
     r = requests.get(url)
     commits = r.json()
