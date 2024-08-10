@@ -1,7 +1,6 @@
-$.get("https://swapi-api.alx-tools.com/api/films/?format=json",
-    function(data, textStatus) {
-        const movies = data.results;
-        movies.forEach(function(movie) {
-            $('UL#list_movies').append('<li>' + movie.title + '</li>');
-    });
+$(document).ready(function (){
+    $.get("https://hellosalut.stefanbohacek.dev/?lang=fr",
+    function(data) {
+        $('DIV#hello').html(data.hello)
+    })
 });
